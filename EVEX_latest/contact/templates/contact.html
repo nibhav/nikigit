@@ -1,0 +1,284 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% load static %}
+
+{% comment %} <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>contact</title>
+  <link rel="stylesheet" href="{% static 'pro.css' %}" />
+  <link rel="stylesheet" href="{% static 'contact.css' %}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <!-- FONTAWESOME  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+
+<body>
+  <!-- Nav bar   -->
+  <header class="d-flex">
+    <nav class="navbar navbar-default fixed-top navbar-expand-lg w-100 bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">
+          <div class="logo-container">
+            <a href="{% url 'index' %}">
+              <img src="{% static 'images/EVEX.png' %}" width="75%" height="75%" alt="logo" /></a>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 navbar-ul">
+            <li class="nav-item dropdown">
+              <a class="nav-link text-dark dropdown-toggle" href="{% url 'product' %}" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                e-rikshaw
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Ranger DX</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Ranger ZX</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Ranger ZX +</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link text-dark dropdown-toggle" href="{% url 'product' %}" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                e-Loader
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">E-Loader</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Ranger LDR Open Body
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Ranger LDR Closed Body</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Ranger Garbage</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Ranger School Van</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link text-dark dropdown-toggle" href="{% url 'product' %}" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                e-bikes
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Sprint</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Sprint +M1</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Sprint +M2</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Sprint ++</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Sprint M1 Lite</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Sprint M2 Lite</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Hasten</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Lighter</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fs-6" href="{% url 'product' %}">Blaze</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="dealer-btn">
+          <a href="{% url 'contact' %}"><button type="button" class="btn btn-dark btn-lg" id="become-dealer-btn"
+              style="margin-right: 4px">
+              contact us
+            </button></a>
+        </div>
+        <div class="dealer-btn">
+          <a href="{% url 'become_dealer' %}"><button type="button" class="btn btn-dark btn-lg" id="become-dealer-btn">
+              Become A Dealer
+            </button></a>
+        </div>
+      </div>
+    </nav>
+    
+      <div class="contactbackground">
+        i
+      </div>
+  </header> {% endcomment %}
+
+  <link rel="stylesheet" href="{% static 'pro.css' %}" />
+  <link rel="stylesheet" href="{% static 'contact.css' %}" />
+  <!-- Body  -->
+  <div class="contactbackground">
+    i
+  </div>
+  <section class="first">
+    <!-- top part  -->
+    <h1 style="margin-top: 25px"> CONTACT US </h1>
+    <hr style="width: 20%" />
+    <h3>
+      We strive to serve our customers better. Whether you are a buyer,
+      dealer, distributor or just looking for information on our products
+    </h3>
+    <br>
+
+    <div class="row">
+      <div class="col">
+        <hr>
+      </div>
+
+      <div class="col" style="text-align: center; color:black; font-size: 1em;">
+        Alternatively you can also fill the form below and we will get in touch with you.
+      </div>
+
+      <div class="col">
+        <hr>
+      </div>
+    </div>
+
+
+    <!-- bottom part  -->
+    <div class="second container-fluid">
+      <!-- row -->
+      <div class="row ">
+
+        <!-- col: 1  -->
+        <div class="col-12 col-md-6 ">
+          <div class="column1">
+            <h2>Send Your Enquiry</h2>
+            <hr width="270" />
+            <br>
+            <form method="POST">
+               {% csrf_token %}
+               
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="firstName" style="color:black;">First Name</label>
+                  <input type="text" name="firstname" class="form-control" id="firstName" size="28" placeholder="first name here">
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="lastName" style="color:black;">Last Name</label>
+                  <input type="text" name="lastname" class="form-control" id="lastName" size="28" placeholder="last name here">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="email" style="color:black;">Email</label>
+                  <input type="email"  name="email" class="form-control" id="email" size="75" placeholder="xyz@gmail.com">
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="lphone" style="color:black;">Phone</label>
+                  <input type="tel"  name="phone" class="form-control" id="lphone" size="75" placeholder="+1 01234 56789">
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="service"  name="sercvices"  style="margin-left:-10px; color:black;">Services</label>
+                <br>
+                <select name="services" id="service">
+                  <option value="select service">Select services</option>
+                  <option value="Enquiry">Enquiry</option>
+                  <option value="E-rikshaw">E-rikshaw</option>
+                  <option value="E-scooter">E-scooter</option>
+                  <E-scooter></E-scooter>
+                  </option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="enquiry"  name="enquiry" style="margin-left:-10px; color:black;">Enter your query</label>
+                <textarea name="enquiry" id="enquiry" cols="64" rows="3" placeholder="your text here"></textarea>
+              </div>
+
+              <div class="button pt-4">
+                <input type="submit" class="button2" value="Submit">
+                <input type="button" class="button1" value="Reset">
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <!-- col: 2  -->
+        <div class="col-12 col-md-6 ">
+          <div class="column2">
+            <!-- heading -->
+            <h2>Our Office Address</h2>
+            <hr width="270" />
+            <br>
+
+            <div style="text-align: left;">
+              <h5 style="color: rgb(45, 45, 217)">Corporate Office</h5>
+              <p style="text-align: left; color: rgb(50, 50, 78); font-size: 0.9em;">
+                246, Near Ray Ban, Garhi Road, Basai Village,<br />
+                Gurgaon, Haryana 122006
+              </p>
+              <hr width="400">
+            </div>
+
+            <div style="text-align: left;">
+              <h5 style="color: rgb(45, 45, 217)">Registered Office</h5>
+              <p style="text-align: left; color: rgb(50, 50, 78); font-size: 0.9em;">
+                246, Near Ray Ban, Garhi Road, Basai Village, <br />
+                Gurgaon, Haryana 122006
+              </p>
+              <hr width="400">
+            </div>
+
+            <div style="text-align: left;">
+              <h5 style="color: rgb(45, 45, 217)">Talk to us</h5>
+              <p style="text-align: left; color: rgb(50, 50, 78); font-size: 0.9em;">
+                Email: info@evexindia.com
+                <br />
+                Phone: +91-8527275512, 8588876415
+              </p>
+              <hr width="400">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+{% endblock body %}

@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% load static %}
+
+{% comment %} <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a dealer</title>
+    <link rel="stylesheet" href="{% static 'pro.css' %}">
+    <link rel="stylesheet" href="{% static 'dealer.css' %}">
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- TESTIMONIAL -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+
+<body>
+    <!-- Nav bar   -->
+    <header class="d-flex">
+        <nav class="navbar navbar-default fixed-top navbar-expand-lg w-100 bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <div class="logo-container">
+                       <a href="{% url 'index' %}"> <img src="{% static 'images/EVEX.png' %}" width="75%" height="75%" alt="logo" /></a>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 navbar-ul">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="{% static 'pro' %}" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                e-rikshaw
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}" >Ranger DX</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Ranger ZX</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Ranger ZX +</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="{% url 'pro' %}" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                e-Loader
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">E-Loader</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Ranger LDR Open Body
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Ranger LDR Closed Body</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Ranger Garbage</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Ranger School Van</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="{% url 'pro' %}" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                e-bikes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Sprint</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Sprint +M1</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Sprint +M2</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Sprint ++</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Sprint M1 Lite</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Sprint M2 Lite</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Hasten</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Lighter</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Blaze</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dealer-btn">
+                    <a href="{% url 'contact' %}">
+                        <button type="button" class="btn btn-dark btn-lg" id="become-dealer-btn"style="margin-right: 4px;">
+                        contact us
+                        </button>
+                    </a>
+                </div>
+                <div class="dealer-btn">
+                    <a href="{% url 'become_dealer' %}">
+                        <button type="button" class="btn btn-dark btn-lg" id="become-dealer-btn">
+                            Become a dealer
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="dealerbackground">
+            x
+        </div>
+    </header> {% endcomment %}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="{% static 'pro.css' %}">
+    <link rel="stylesheet" href="{% static 'dealer.css' %}">
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+    <!-- BODY section   -->
+    
+    <div class="dealerbackground">
+        x
+    </div>
+    <section id="surrounding-background_design">
+        <!-- top part   -->
+        <div class="first">
+            <h1 style="color: rgb(128, 28, 36);margin-top: 30px;">BECOME A DEALER</h1>
+            <hr style="width:30% ;">
+            <h3 style="color:rgb(106, 43, 43);">
+                We always look forward to zealous individuals who want to take this initiative forward. This is
+                your perfect opportunity to join the next big thing in the EV industry.
+            </h3> <br>
+            <p style="color:black;">
+                You can file your applications by filling the dealership form below and sending it by
+                courier or filling it online here
+            </p>
+        </div>
+
+        <!-- bottom part  -->
+        <div class="container" id="second-background_design">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-md-6 px-3">
+                        <label for="firstName">Full Name</label>
+                        <input type="text" name="full_name" class="form-control" id="firstName" size="70" placeholder="your name here">
+                    </div>
+                    <div class="form-group col-md-6 px-3">
+                        <label for="phno">Mobile</label>
+                        <input type="tel" name="mobile" class="form-control" id="phno" size="74" placeholder="+11 01234 56789">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 px-3">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" size="70" placeholder="xyz@gmail.com">
+                    </div>
+                    <div class="form-group col-md-6 px-3">
+                        <label for="webb">Website</label>
+                        <input type="url" name="website" class="form-control" id="webb" size="74">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 px-3">
+                        <label for="org">Organisation</label>
+                        <input type="text" name="organization" class="form-control" id="org" size="160" placeholder="XYZ">
+                    </div>
+                    <div class="form-group col-md-6 px-3">
+                        <label for="city">City</label>
+                        <input type="text" name="city" class="form-control" id="city" size="160" placeholder="ex. (New York)">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 px-3">
+                        <label for="pf">Proposed Firm</label>
+                        <input type="text" name="proposed_firm" class="form-control" id="pf" size="160">
+                    </div>
+                    <div class="form-group col-md-6 px-3">
+                        <label for="gstno">GST No.</label>
+                        <input type="text" name="gst_no" class="form-control" id="gstno" size="160">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 px-3">
+                        <label for="accno">Account Number</label>
+                        <input type="text" name="account_number" class="form-control" id="accno" size="70" placeholder="account number here">
+                    </div>
+                    <div class="form-group col-md-6 px-3">
+                        <label for="ifsccode">IFSC Code</label>
+                        <input type="text" name="ifsc_code" class="form-control" id="ifsccode" size="72" placeholder="ifsc code here">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 px-3">
+                        <label for="accholder">Account Holder</label>
+                        <input type="text" name="account_holder" class="form-control" id="accholder" size="160"
+                            placeholder="holder name here">
+                    </div>
+                </div>
+
+                <div class="form-group px-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="declare">
+                        <label class="form-check-label" for="declare">
+                            I/ We fully understand that , in case any information provided by me/us herein is found to
+                            be false or incorrect , EVEX India . reserves the right to reject the application or reverse
+                            any decision taken on this information .
+                        </label>
+                    </div>
+                </div>
+
+                <div class="button py-4 px-3">
+                    <input type="submit" class="button1" value="Submit" />
+                    <input type="button" class="button2" value="reset" />
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+
+
+  
+
+
+{% endblock body %}

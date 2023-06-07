@@ -1,0 +1,477 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% load static %}
+
+{% comment %} <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVEX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{% static 'icon.png '%}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <!-- FONTAWESOME  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'pro.css' %}">
+    <link rel="stylesheet" href="{% url 'pro' %}">
+    <link rel="stylesheet" href="{% url 'product' %}">
+    <link rel="stylesheet" href="{% url 'contact' %}">
+    <link rel="stylesheet" href="{% url 'become_dealer' %}">
+
+</head>
+
+<body>
+    <header class="d-flex">
+        <nav class="navbar navbar-default fixed-top navbar-expand-lg w-100 bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <div class="logo-container">
+                       <a href="{% url 'index' %}"> <img src="{% static 'images/EVEX.png' %}" width="75%" height="75%" alt="logo" /></a>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 navbar-ul">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="{% static 'pro' %}" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                e-rikshaw
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}" >Ranger DX</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Ranger ZX</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Ranger ZX +</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="{% url 'pro' %}" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                e-Loader
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">E-Loader</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Ranger LDR Open Body
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Ranger LDR Closed Body</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Ranger Garbage</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Ranger School Van</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="pro.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                e-bikes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Sprint</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Sprint +M1</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Sprint +M2</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Sprint ++</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Sprint M1 Lite</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Sprint M2 Lite</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Hasten</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Lighter</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fs-6" href="{% url 'pro' %}">Blaze</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dealer-btn">
+                    <a href="{% url 'contact' %}">
+                        <button type="button" class="btn btn-dark btn-lg" id="become-dealer-btn"style="margin-right: 4px;">
+                        contact us
+                        </button>
+                    </a>
+                </div>
+                <div class="dealer-btn">
+                    <a href="{% url 'become_dealer' %}">
+                        <button type="button" class="btn btn-dark btn-lg" id="become-dealer-btn">
+                            Become a dealer
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+     {% endcomment %}
+     <link rel="shortcut icon" href="{% static 'icon.png '%}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+     <link rel="stylesheet" href="{% static 'pro.css' %}">
+     <link rel="stylesheet" href="{% url 'pro' %}">
+     <link rel="stylesheet" href="{% url 'product' %}">
+     <link rel="stylesheet" href="{% url 'contact' %}">
+     <link rel="stylesheet" href="{% url 'become_dealer' %}">
+      <link rel="stylesheet" href="{% static 'style.css' %}">
+
+     <section class="row">
+        <div class="first-carousel owl-carousel">
+          <div class="owl-item-box ">
+         <div class="hero">
+          <div class="company-name col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+          EVEX <br />
+          India
+        </div>
+        <div class="company-more-info col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+          <h3 class="title">Lorem</h3>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius pariatur
+            nemo, laborum incidunt unde necessitatibus!
+          </p>
+        </div>
+        </div>
+          </div>
+          <div class="owl-item-box">
+         <div class="hero">
+          <div class="company-name col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+          EVEX <br />
+          Japan
+        </div>
+        <div class="company-more-info col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+          <h3 class="title">Lorem</h3>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius pariatur
+            nemo, laborum incidunt unde necessitatibus!
+          </p>
+        </div>
+        </div>
+          </div>
+          <div class="owl-item-box">
+         <div class="hero">
+          <div class="company-name col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+          EVEX <br />
+          Germany
+        </div>
+        <div class="company-more-info col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+          <h3 class="title">Lorem</h3>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius pariatur
+            nemo, laborum incidunt unde necessitatibus!
+          </p>
+        </div>
+        </div>
+          </div>
+        </div>
+      </section> 
+           
+            <section class="my-product d-flex justify-content-center align-items-center pb-5">
+                <div class="card">
+                    <div class="row g-0 container my-product-container" id="part_3-top_para">
+                        <p style="color:#bb2f37;font-size: 21px;font-weight: 500; padding-top: 2rem;padding-left:2rem;text-align:center"> Modern design Smooth contours, bright colours- a combination of fashion and luxury.
+                            Whether young or old, man or woman: you will love EK3! This electric scooter is spacious
+                            and comfortable. It was created for everyday use to cover longer distances quickly,
+                            elegantly and economically.</p>
+                    </div>
+                    <div class="row g-0 container my-product-container">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-img">
+                            <img src="{% static 'images/rotate.gif' %}" alt="95" />
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-info" style="padding-top: 100px;">
+                            <h3 style="text-align: center;">KEY FEATURES</h3>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="{% static 'images/pdf-logo-1.PNG' %}" class="pdf-logo-images">
+                                    <p class="pdf-logo-info">Heavy Duty Power Train</p>
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'images/pdf-logo-2.PNG' 1%}" class="pdf-logo-images">
+                                    <p class="pdf-logo-info">Center Locking System</p>
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'images/pdf-logo-3.PNG' %} " class="pdf-logo-images">
+                                    <p class="pdf-logo-info">Automotive Vendor Parts</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="{% static 'images/pdf-logo-4.PNG' %}" class="pdf-logo-images">
+                                    <p class="pdf-logo-info">Zero Defect Product</p>
+                                </div>
+                                 <div class="col">
+                                    <img src="{% static 'images/pdf-logo-5.PNG' %}" class="pdf-logo-images">
+                                    <p class="pdf-logo-info">LED Display Panel</p>
+                                </div>
+                                    <div class="col">
+                                    <img src="{% static 'images/pdf-logo-6.PNG' %}" class="pdf-logo-images">
+                                    <p class="pdf-logo-info">Reverse Gearing System</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="my-product d-flex justify-content-center align-items-center bg-slugify">
+                <div class="about">
+                    <h3>95 <sup>KM/H</sup></h3>
+                    MAX.SPEED
+                </div>
+                <div class="about">
+                    <h3>6200 <sup>W</sup></h3>
+                    MOTOR.MAX
+                </div>
+                <div class="about">
+                    <h3>3500<sup>W</sup></h3>
+                    MOTOR.RATED
+                </div>
+                <div class="about ">
+                    <h3>100<sup>KM</sup></h3>
+                    MAX.RANGE
+                    <p>(AT 45 KM/H)</p>
+                </div>
+            </section>
+        
+            <section style="background-color: #DEDBDE; padding: 1.4em 0;">
+                <h3 style="text-align:center; padding:1.2em 0">SPECIFICATIONS</h3>
+                  <div class="row">
+                    <div class="col" style="text-align:end;">
+                        <p>Max Speed</p>
+                        <p>Mileage @28AH Battery</p>
+                        <p>Seating Capacity</p>
+                        <p>Wheel Size (Front & Rear)</p>
+                        <p>Motor Details</p>
+                        <p>Front & Rear Brakes</p>
+                        <p>Speedometer</p>
+                        <p>Starting System</p>
+                        <p>Motor Input Voltage</p>
+                        <p>Motor Wattage</p>
+                        <p>Controller</p>
+                        <p>Batteries</p>
+                        <p>Batteries Type</p>
+                        <p>Ground Clearance</p>
+                    </div>
+                    <div class="col">
+                        <p>50km/hr</p>
+                        <p>70km/hr/charge*</p>
+                        <p>Driver +1 Passengers</p>
+                        <p>90 x 100-10 in</p>
+                        <p>BLDC Hub Motor</p>
+                        <p>ABS</p>
+                        <p>LED Based Panel</p>
+                        <p>Electric Start</p>
+                        <p>48 V / 60 V</p>
+                        <p>1000W</p>
+                        <p>BLDC 18V / 48V /60V</p>
+                        <p>12V / 28Ah</p>
+                        <p>VRLA / Lithium</p>
+                        <p>150mm</p>
+                    </div>
+                </div>
+            </section>
+        
+            <div class="parabutton pt-4" style="padding-bottom: 40px;">
+                <button type="button" class="btn btn-lg btn-primary">More parameters? Contact us!</button>
+            </div>
+    
+            <section class="my-product d-flex justify-content-center align-items-center">
+                <div class="card">
+                    <div class="row g-0 container my-product-container">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-info" style="padding-top: 80px;">
+                            <div class="title fw-bold">DRIVING EXPERIENCE AT UP TO 95 KM/H</div>
+                            <p class="description">
+                                The EK3 is fast on the road and achieves a top speed of 95 km/h.
+                                The 14-inch front wheel and 13-inch rear wheel offer excellent
+                                manoeuvrability. Safety is provided by the efficient CBS braking
+                                system. The central motor delivers a consistent and strong
+                                performance. The outstanding ergonomic design and efficient shock
+                                absorption system ensure a comfortable driving experience.
+                            </p>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-img ">
+                            <img src="{% static 'images/95img.jpg' %}" alt="95" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <div style="background-color:#DEDBDE; margin-top: 30px;">
+                <section class="my-product d-flex justify-content-center align-items-center thirdimg">
+                    <div class="card" style="width:auto;">
+                        <div>
+                            <img src="{% static 'images/img 3.webp' %}" width="100%" alt="">
+                        </div>
+                    </div>
+                </section>
+                <section class="my-product d-flex justify-content-center align-items-center" style="padding:40px 0px;">
+                    <div class="card" style="background-color:#DEDBDE">
+                        <div class=" container my-product-container">
+                            <div class="my-product-info">
+                                <div class="title fw-bold">BATTERY WITH ITS OWN MANAGEMENT</div>
+                                <p class="description">
+                                    The EK3 scooter can be equipped with two lithium-ion batteries that are easily
+                                    removable. The battery is supplied 18650 lithium-ion battery cells. The SOC monitoring
+                                    system and the modern battery management system can prevent malfunctions. Among other
+                                    things, they provide protection against over-charging, discharging, over-voltage, short
+                                    circuit and monitor the temperature of the batteries. One battery cell has a capacity of
+                                    10.44Wh, the whole battery has 2.88kWh. The battery life is over 1000 cycles. The
+                                    standard charging current is 10A. The charging time of one battery is 4 hours. An
+                                    intelligent charger is used for this.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="my-product d-flex justify-content-center align-items-center led_bg">
+                <div class="card led_bg  py-4">
+                    <div class="row g-0 container my-product-container">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-img ">
+                            <img src="{% static 'images/ek_scooter_-_Cropped-removebg-preview.png' %}" style="width: 500px;" alt="95" />
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-info" style="padding-top: 100px;">
+                            <div class="title fw-bold" style="text-align: right;">LED DAYTIME RUNNING <br> LIGHT FOR
+                                <br> MORE SAFETY
+                            </div>
+                            <p class="description" style="text-align: right;">
+                                The automatic daytime running light DRL (Daytime Running Light) shines with an intensive
+                                white xenon lamp. This improved lighting brings more safety- especially on rainy and
+                                foggy days. An automatic light switch-off delay lights your way to the garage or
+                                entrance door when you leave the vehicle.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-product d-flex justify-content-center align-items-center smt-charge-bg">
+                <div class="card smt-charge-bg">
+                    <div class="row g-0 container my-product-container">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-info">
+                            <div class="title fw-bold" style="text-align: left; padding-top:120px;">SMART PHONE CAN BE CHARGED
+                                <br> WHILE DRIVING
+                            </div>
+                            <p class="description" style="text-align: left;">
+                                While you are cruising with your EK3, you can charge your smart phone on board via the
+                                USB connector. This convenient additional function offers you the security of always
+                                having the
+                                battery of your mobile companion sufficiently full- no matter when and where.
+                            </p>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-img">
+                            <img src="{% static 'images/charger-cropped.jpg' %}" width="500" alt="95" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="my-product d-flex justify-content-center align-items-center">
+                <div class="card">
+                    <div class="row g-0 container my-product-container">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-img">
+                            <img src="{% static 'images/S6-Schlüssel.png' %}" width="600" alt="95" />
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-info" style="padding-top: 100px;">
+        
+                            <p class="description">
+                                Modern design Smooth contours, bright colours- a combination of fashion and luxury.
+                                Whether young or old, man or woman: you will love EK3! This electric scooter is spacious
+                                and comfortable. It was created for everyday use to cover longer distances quickly,
+                                elegantly and economically.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="my-product d-flex justify-content-center align-items-center">
+                <div class="card" style="background-color: #D4D0D1; width: 100%;">
+                    <div class="row g-0 container my-product-container">
+                        <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 my-product-info"
+                            style="padding-top: 70px; padding-left: 80px; margin-bottom: 10px;">
+                            <div class="title fw-bold">CBS BRAKING SYSTEM</div>
+                            <p class="description" style="color: black; padding-top: 20px;">
+                                The CBS braking system will split braking force between the front and rear brake discs
+                                when you brake in an emergency, reducing stopping distance and ensuring a safe brake at
+                                high speeds.
+                                The sensitive brakes allow extremely precise handling in and around corners, even in wet
+                                conditions. 220mm front brake disc and 190 mm rear brake disc guarantee safe and
+                                efficient braking in all conditions.
+                            </p>
+                        </div>
+                        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 my-product-img">
+                            <img src="{% static 'images/invisible.jpg' %}" width="600" alt="95" />
+                        </div>
+        
+                    </div>
+                </div>
+            </section>
+                {% comment %} <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                    © 2019-2022
+                    <a class="text-white" href="#">
+                        Evexindiaglobal All rights reserved.
+                    </a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+            <!-- FOOTER  -->
+            <!-- BACK TO TOP  -->
+            <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            <!-- BACK TO TOP  -->
+            <!-- LEAVE A MESSAGE  -->
+            <a class="btn btn-danger" style="background-color: rgb(249, 49, 84)" href="#!" role="button"
+                id="leave-message">
+                <i class="far fa-envelope me-2"></i>
+                leave a message
+            </a>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="app.js"></script>
+
+</body>
+
+
+</html> {% endcomment %}
+{% endblock body %}

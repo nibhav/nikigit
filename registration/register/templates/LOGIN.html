@@ -1,0 +1,38 @@
+{% extends 'regis.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        {% if messages %}
+				
+	{% for message in messages %}
+		<b> {{ message }} </b>
+	{% endfor %}
+
+{% endif %}
+        <title>login page</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'LOGIN.css' %}">
+    </head>
+
+    {% if messages %}
+				
+		{% for message in messages %}
+			<b> {{ message }} </b>
+		{% endfor %}
+
+	{% endif %}
+    <body>
+        <form method="POST">
+            {% csrf_token %}
+            {% block content %}
+                <h2>LOGIN</h2><br><br><br>
+                
+                email:<input type="email" name="email" placeholder="Your email"><br>
+                password:<input type="password" name="password" placeholder=" create Your passsword"><br>
+                
+                <button type='submit'>LOGIN</button>
+         {% endblock content %}
+        </form>
+    </body>
+</html>
+        

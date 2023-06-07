@@ -1,0 +1,36 @@
+body{
+    margin:10px;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(120, 221, 134);
+    align-items: center;
+}
+button{
+    height:50px;
+    width:150px;
+    background-color: rgb(105, 29, 247);
+    color:rgb(245, 245, 248);
+    margin-top: -10%;
+    font-weight: 700;
+    font-size: 20px;
+    border:none;
+    text-decoration: underline;
+   
+}
+h1{
+    color:navy;
+}
+p{
+    text-align: center;
+    font-size: 20px;
+}
+img{
+    height:200px;
+    width:600px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>doing calci..</title>
+<link rel="stylesheet" type="text/css" href="calci.css">
+</head>
+<body>
+<h1>Simple Calculator</h1>
+
+<canvas id="newcanvas" width="400" height="600" style="border:6px solid white;">
+</canvas>
+
+<form name="form1" class="calci" action="calculator.html" method="POST">
+<input type="text" name="answer" id="display">
+<br>
+<input type="Button" class="but" value="7" onclick="form1.answer.value+='7' ">
+<input type="Button" class="but" value="8" onclick="form1.answer.value+='8' ">
+<input type="Button" class="but" value="9" onclick="form1.answer.value+='9' ">
+<input type="Button" class="operator" value="+" onclick="form1.answer.value+='+' ">
+<br>
+<input type="Button" class="but" value="6" onclick="form1.answer.value+='6' ">
+<input type="Button" class="but" value="5" onclick="form1.answer.value+='5' ">
+<input type="Button" class="but" value="4" onclick="form1.answer.value+='4' ">
+<input type="Button" class="operator" value="-" onclick="form1.answer.value+='-' ">
+<br>
+<input type="Button" class="but" value="3" onclick="form1.answer.value+='3' ">
+<input type="Button" class="but" value="2" onclick="form1.answer.value+='2' ">
+<input type="Button" class="but" value="1" onclick="form1.answer.value+='1' ">
+<input type="Button" class="operator" value="*" onclick="form1.answer.value+='*' ">
+<br>
+<input type="Button" class="but" value="0" onclick="form1.answer.value+='0' ">
+<input type="Button" class="operator" value="/" onclick="form1.answer.value+='/' ">
+<input type="Button" class="operator" value="%" onclick="form1.answer.value+='%' ">
+<input type="Button" class="operator" value="." onclick="form1.answer.value+='.' ">
+<br>
+<input type="Button" class="but1" value="=" onclick="form1.answer.value=eval(form1.answer.value)" >
+<br>
+<input type="Button" class="but2" value="Delete All" onclick="form1.answer.value='  ' ">
+<input type="Button" class="but2" value="Del Last" onclick="form1.answer.value=form1.answer.value.substring(0,form1.answer.value.length*1-1)  ">
+</form>
+
+</body>
+</html>  

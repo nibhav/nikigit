@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	{% load static %}
+<head>
+	<title>register page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'regis.css' %}">
+</head>
+<body>
+	{% block content %} 
+
+
+
+	<h1>Register</h1>
+	{% if messages %}
+				
+	{% for message in messages %}
+		<b> {{ message }} </b>
+	{% endfor %}
+
+{% endif %}
+	<form method="POST">
+		{% csrf_token %}
+		   <br>
+		   <br>
+        email:<input type="email" name="email" placeholder="Your email"><br>
+        Username:<input type="text" name="username" placeholder="Your username"><br>
+        password:<input type="passsword" name="password" placeholder="password must be strong"><br>   
+		<br>          
+		<button type="submit">REGISTER</button>
+		
+		 <button type='submit'><a href='{% url 'LOGIN' %}'>LOGIN</button> 
+		
+
+      <br>
+	</form>
+	{% endblock content %}
+</body>
+</html>
+	
+
+
+
+
